@@ -1,45 +1,57 @@
 /* Split the screen in half */
 .split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 10px;
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 10px;
 }
 
 /* Control the left side */
 .left {
-  left: 0;
-  background-color: white;
+    left: 0;
+    background-color: white;
 }
 
 /* Control the right side */
 .right {
-  right: 0;
-  background-color: lightgrey;
+    right: 0;
+    background-color: lightgrey;
 }
 
 /* Centering left div horizontally and vertically*/
-#ldiv{
-    border: 2px solid blue;
-    position: absolute;
+#lDiv{
+    border: 3px;
+    padding: 10px;
+    position: fixed;
+    margin: auto;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    
+    transform: translate(80%,-50%);
+    box-shadow: 5px 10px #888888;
 }
 
 /* Centering right div horizontally and vertically*/
-#rdiv{
-    border: 2px solid blue;
-    position: relative;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;    
+#rDiv{
+    border: 3px;
+    padding: 10px;
+    margin: auto;
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    transform: translate(20%,-50%);
+
+}
+
+#mDiv{
+    border: 3px;
+    padding: 5px;
+    position: fixed;
+    margin: auto;
+    top: 95%;
+    transform: translate(-50%,-80%);
 }
 
 h1{
@@ -48,10 +60,26 @@ h1{
 }
 
 ol,li{
-    text-align: center;
-    font-family: serif;
-    color: darkslategray;
-
+    margin: auto;
+    width: 70%;
+    font-family: 'Gudea', monospace;
 }
 
+#myBtn{
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 15px;
+}
 
+img{
+    max-width: 100%;
+}
+
+i{
+    border: solid;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
