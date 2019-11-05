@@ -25,10 +25,10 @@
 #lDiv{
     border: 3px;
     padding: 10px;
-    position: fixed;
-    margin: auto;
-    top: 50%;
-    transform: translate(80%,-50%);
+    position: relative;
+    width: 40%;
+    top: 25%;
+    left: 30%;
     box-shadow: 5px 10px #888888;
 }
 
@@ -39,9 +39,10 @@
     margin: auto;
     width: 70%;
     height: 80%;
-    position: absolute;
+    position: relative;
     top: 50%;
-    transform: translate(20%,-50%);
+    transform: translate(0%,-50%);
+
 
 }
 
@@ -61,8 +62,11 @@ h1{
 
 ol,li{
     margin: auto;
-    width: 70%;
-    font-family: 'Gudea', monospace;
+    padding-bottom: inherit;
+    font-family: 'Gudea' ,monospace;
+    position: relative;
+    width: inherit;
+
 }
 
 #myBtn{
@@ -81,5 +85,5 @@ i{
     display: inline-block;
     padding: 3px;
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
