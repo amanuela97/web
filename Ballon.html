@@ -22,7 +22,8 @@
                 emoji.style.fontSize = "50px";
             }
             else if(ev.key === "ArrowUp"){
-                if(parseFloat(emoji.style.fontSize) <= 100){
+                ev.preventDefault();
+                if(parseFloat(emoji.style.fontSize) <= 200){
                     emoji.style.fontSize = (parseFloat(emoji.style.fontSize) * 0.1) + parseFloat(emoji.style.fontSize) + "px";
                 }   
                 else{
