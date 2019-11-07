@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Mouse Trail </title>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            height: 300px;
+            background: red;
+        }
+        .trail{
+            height: 8px; width: 8px;
+            border-radius: 4px; /* rounds corners */
+            background: black;
+            position: absolute;
+        }
+    </style>   
+</head>
+<body>  
+    <script>
+        'use strict';
+        
+        document.body.addEventListener("mousemove", move);
+        
+        let trailArray = [];
+        for(let i = 0; i < 5; i++){
+            let dot = document.createElement("div");
+            dot.className = "trail";
+            document.body.appendChild(dot);
+            trailArray.push(dot);
+        }
+        
+        let count = 0;
+        function move(event){
+            trailArray[count].style.left = (event.clientX -4) + "px";
+            trailArray[count].style.top = (event.clientY-4) + "px";
+            if(count === trailArray.length-1){
+                count = 0;
+            }
+            else{
+                count++;
+            }
+            
+        }
+    </script>
+</body>
+</html>
