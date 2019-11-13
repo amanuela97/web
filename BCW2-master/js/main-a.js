@@ -3,7 +3,7 @@
 // adds the loaded HTML content to <ul> element
 
 const ul = document.getElementById('add');
-const url = 'http://localhost:63342/BCW2-master/images.html?_ijt=4ktvd5gbujeim89rkst9kd4q97';
+const url = 'images.html';
 
 function append(parent, el) {
     return parent.appendChild(el); // Append the second parameter(element) to the first one
